@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = 'mlebench'
 readme = "README.md"
-requires-python = ">=3.11"
+requires-python = ">=3.10"
 version = "1.0.0"
 dependencies = [
   "appdirs>=1.4.4",
