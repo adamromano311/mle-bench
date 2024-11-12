@@ -226,11 +226,7 @@ def download_dataset(
         )
     except ApiException as e:
         if _need_to_accept_rules(str(e)):
-            logger.warning("You must accept the competition rules before downloading the dataset.")
-            _prompt_user_to_accept_rules(competition_id)
-            download_dataset(competition_id, download_dir, quiet, force)
-        else:
-            raise e
+            logger.warning(f'Skipping competition {competition_id} because rules have not been accepted...')
 
     zip_files = list(download_dir.glob("*.zip"))
 
