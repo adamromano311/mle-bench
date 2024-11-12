@@ -144,7 +144,7 @@ def download_and_prepare_dataset(
         logger.info(f"Removing the raw data directory for `{competition.id}`...")
         shutil.rmtree(competition.raw_dir)
 
-    logger.info(f"Removing zip file for {competition_id} ...")
+    logger.info(f"Removing zip file for {competition.id} ...")
     if os.path.exists(zipfile):
         os.remove(zipfile)
 
