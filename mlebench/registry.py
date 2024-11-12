@@ -135,7 +135,8 @@ class Registry:
 
         competition_configs = self.get_competitions_dir().rglob("config.yaml")
         competition_ids = [f.parent.stem for f in sorted(competition_configs)]
-
+        competition_ids.remove('detecting-insults-in-social-commentary')
+        competition_ids.remove('the-icml-2013-whale-challenge-right-whale-redux')
         return competition_ids
 
 
